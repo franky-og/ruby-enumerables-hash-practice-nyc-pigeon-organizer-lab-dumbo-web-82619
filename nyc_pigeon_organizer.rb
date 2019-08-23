@@ -9,7 +9,7 @@ def nyc_pigeon_organizer(data)
     data.map{|key, value|
       values_array = []
       
-      data[key].map{|key2, value2|
+      value[key].map{|key2, value2|
         if value2.include? pigeon
           values_array << key2
         end
