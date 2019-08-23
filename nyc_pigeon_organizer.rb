@@ -14,7 +14,7 @@ def nyc_pigeon_organizer(data)
           values_array << key2
         end
       }
-      new_data[pigeon][:color] = values_array
+      new_data[pigeon][key] = values_array
       
     
     }
