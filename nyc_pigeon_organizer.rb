@@ -4,12 +4,17 @@ def nyc_pigeon_organizer(data)
   names = data[:gender][:male] + data[:gender][:female]
   
   names.map{|pigeon|
-    pigeon_colors = []
-    data[:color].map{|key_color, value_pigeons|
-      if value_pigeons.include? pigeon
-        pigeon_colors << key_color
-      end
+    
+    data.map{|key, value|
+      pigeon_colors = []
+      data[key].map{|key2, value2|
+        if value2.include? pigeon
+          pigeon_colors << key_color
+        end
+      }
+      
     }
+    
     new_data[pigeon] = {
       :color => pigeon_colors,
       :gender => ,
